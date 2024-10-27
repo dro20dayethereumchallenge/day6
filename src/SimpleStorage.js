@@ -2,16 +2,14 @@ import React, {Component} from 'react'
 import Web3 from 'web3'
 import logo from './logo.svg';
 import './App.css';
-
 import SimpleAbi from './contractsData/SimpleStorage.json'
 import SimpleAddress from './contractsData/SimpleStorage-address.json'
 
 class SimpleStorage extends Component {
 
     componentWillMount(){
-
-            this.loadWeb3()
-	    this.loadBlockchainData()
+        this.loadWeb3()
+        this.loadBlockchainData()
     }
     async loadWeb3(){ 
 	if (window.ethereum) { 
@@ -30,7 +28,7 @@ class SimpleStorage extends Component {
 	else { 
 		window.alert('non-ethereum browser detected - you should consider trying MetaMask!')
 	}
-}
+    }
     async loadBlockchainData(){
         
         console.log('VotingAddress.address', SimpleAddress.address)
@@ -57,8 +55,7 @@ class SimpleStorage extends Component {
   //       contract.options.address = jsonData['networks'][networkId]["address"]
          contract.options.address = SimpleAddress.address
 	    //"0xe7f1725E7734CE288F8367e1Bb143E90bb3F0512"
-
-	    this.setState( { contract }) 
+         this.setState( { contract }) 
 	}
 
   constructor(props){
@@ -81,7 +78,6 @@ class SimpleStorage extends Component {
 	 getCurrentVal = async () => {
 		 let val = await this.state.contract.methods.get().call(console.log);
         this.setState( { message : val })
-// not good		 console.log(val)
 	 	}
 	
 render(){	
