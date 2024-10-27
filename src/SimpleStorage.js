@@ -33,26 +33,13 @@ class SimpleStorage extends Component {
 }
     async loadBlockchainData(){
         
-
-    console.log('VotingAddress.address', SimpleAddress.address)
-    console.log('VotingAbi.abi', SimpleAbi.abi)
-
-	    const web3 = new Web3(window.web3.currentProvider);
-         
-
-	    //. if (!web3.currentProvider){
-         // works!!!!!        const web3 = new Web3(new Web3.providers.HttpProvider("http://ec2-35-87-194-231.us-west-2.compute.amazonaws.com:8545"))
-         // }//
-	        //. if (!web3.currentProvider){
-    // worked - no wallet     const web3 = new Web3(new Web3.providers.HttpProvider("http://ec2-35-94-196-52.us-west-2.compute.amazonaws.com:8545"))
-         // }//
-
-
-
-	 this.setState( { web3 } )
-         var account;
-         const accounts  = await web3.eth.getAccounts()
-	 console.log(accounts)
+        console.log('VotingAddress.address', SimpleAddress.address)
+        console.log('VotingAbi.abi', SimpleAbi.abi)
+	const web3 = new Web3(window.web3.currentProvider);
+	this.setState( { web3 } )
+        var account;
+        const accounts  = await web3.eth.getAccounts()
+	console.log(accounts)
 	     web3.eth.getAccounts().then((f) => {
              account = f[0];
          })
