@@ -44,3 +44,25 @@ vi scripts/deploy.js
 /home/ubuntu/hello npx   hardhat run scripts/deploy.js --network localhost
 
 /home/ubuntu/hello npm start   
+
+
+
+
+metamask config
+
+establish (initial) connection via ethereum mainnet
+add 'new' network 
+
+parameters: 
+network name <your choice!>
+new RPC URL
+<http://<aws dns>:8545
+chain ID
+31337
+currency symbol :   <you choice>
+
+
+
+load in account from hardhat network <private key> for 10000 tokens
+
+
