@@ -12,7 +12,7 @@ npm i @openzeppelin/contracts@4.5.0
 
 
 
-npx create-react-app hello
+npx create-react-app wallet
 cd hello
 
 
@@ -27,10 +27,11 @@ npx hardhat init
 # double check dns
 vi hardhat.config.js
 
-vi contracts/Hello.sol
+vi contracts/SimpleStorage.sol
 
 # double check dns
 vi src/App.js
+vi src/SimpleStorage.js
 
 # from project directory
 mkdir scripts       
